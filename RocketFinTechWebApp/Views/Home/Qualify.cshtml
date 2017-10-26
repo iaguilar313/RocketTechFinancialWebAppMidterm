@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Qualify";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model RocketFinTechWebApp.Models.UserData
+
+<h2>Pre-Qualify Today</h2>
+
+<form action="/Home/ProcessForm" method="post">
+    Name: <input type="text" name="UserName"/><br/>
+    <br/>
+    Phone #: <input type="text" name="PhoneNumber" /><br />
+    <br />
+    Email:<input type="text" name="Email" /><br />
+    <br />
+    Income:<input type="text" name="Income" /><br />
+    <br />
+    Credit Score: <select name="Score">
+        <option value="550-649">Poor (550-649)</option>
+        <option value="650-749"> Good (650-749)</option>
+                      <option value="750+">Excelent (750+)</option>
+           </select><br />
+    <br />
+    <input type="submit" value="Check Qualification" />
+
+</form>
